@@ -1,0 +1,21 @@
+diff --git a/meizu_1882_ftm5/fts/fts_proc.c b/meizu_1882_ftm5/fts/fts_proc.c
+index d2bd086..73fec56 100644
+--- a/meizu_1882_ftm5/fts/fts_proc.c
++++ b/meizu_1882_ftm5/fts/fts_proc.c
+@@ -2136,6 +2136,7 @@ static ssize_t fts_driver_test_write(struct file *file, const char __user *buf,
+ 			j = snprintf(&driver_test_buff[index], fileSize - index,
+ 				     "2) FW running: Sensing On...");
+ 			index += j;
++			/*
+ 			logError(1, "%s Sensing On!\n", tag);
+ 			readData[0] = FTS_CMD_SCAN_MODE;
+ 			readData[1] = SCAN_MODE_ACTIVE;
+@@ -2160,7 +2161,7 @@ static ssize_t fts_driver_test_write(struct file *file, const char __user *buf,
+ 					     "Echo FOUND... OK!\n");
+ 				index += j;
+ 			}
+-
++			*/
+ 			logError(1, "%s Reading Frames...!\n", tag);
+ 			j = snprintf(&driver_test_buff[index], fileSize - index,
+ 				     "3) Read Frames:\n");
