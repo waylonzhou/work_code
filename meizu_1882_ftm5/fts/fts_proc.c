@@ -2132,7 +2132,7 @@ static ssize_t fts_driver_test_write(struct file *file, const char __user *buf,
 				     "Present Driver Mode: %08X\n",
 				     info->mode);
 			index += j;
-
+			/*
 			j = snprintf(&driver_test_buff[index], fileSize - index,
 				     "2) FW running: Sensing On...");
 			index += j;
@@ -2160,7 +2160,7 @@ static ssize_t fts_driver_test_write(struct file *file, const char __user *buf,
 					     "Echo FOUND... OK!\n");
 				index += j;
 			}
-
+			*/
 			logError(1, "%s Reading Frames...!\n", tag);
 			j = snprintf(&driver_test_buff[index], fileSize - index,
 				     "3) Read Frames:\n");
